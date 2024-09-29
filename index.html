@@ -66,7 +66,7 @@
     <!-- Contact Section -->
     <section id="contact">
         <h2>Contact Me</h2>
-        <form action="submit_form.php" method="POST">
+        <form class="cnt_form" onsubmit="return shAlert()">
           <input type="text" name="name" placeholder="Your Name" required />
           <input type="email" name="email" placeholder="Your Email" required />
           <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
@@ -93,6 +93,10 @@
       function closeMenu() {
         const nav = document.querySelector("nav ul");
         nav.classList.remove("active");
+      }
+      function shAlert() {
+        alert("ThankYou, Your message has been sent");
+        return true;
       }
     </script>
   </body>
