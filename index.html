@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="atchu.css">
+  </head>
+  <body>
+
+      <nav>
+        <h2>ATCHAYA M</h2>      
+         <ul>
+            <li><a href="#home" onclick="closeMenu()">HOME</a></li>
+            <li><a href="#about" onclick="closeMenu()">ABOUT</a></li>
+            <li><a href="#projects" onclick="closeMenu()">PROJECTS</a></li>
+            <li><a href="#contact" onclick="closeMenu()">CONTACT</a></li>
+         </ul>
+         <!-- Add Menu Button -->
+         <div class="menu-button" onclick="toggleMenu()">
+           &#9776;
+         </div>
+      </nav>
+
+    <section id="home">
+      <div class="home" id="home"><br><br>
+        <h1>
+          Atchaya.M <br />
+        </h1>
+        <h2>- UI / UX DESIGNER</h2>
+        <p>
+            Hi, I'm Atchaya – A Web Developer specializing in creating dynamic and responsive websites. I have a strong background in front-end and back-end development, with expertise in HTML, CSS, JavaScript, Bootstrap, and PHP. With experience in tools like VSCode, Git, and SQL Server, I focus on delivering user-centric websites that not only look good but perform efficiently.
+          </p>
+          </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <br>
+        <br>
+        <br>
+        <br>
+        <h2>About Me</h2>
+        <p>My journey in web development started I discovered my love for problem-solving and creating digital solutions. Over the years, I have worked on diverse projects ranging from simple landing pages to dynamic web applications. I am proficient in modern frameworks like Bootstrap and jQuery and have hands-on experience with tools like VSCode, Git, and SQL Server for version control and database management.
+  
+        I take pride in writing clean, scalable code and enjoy collaborating with teams to bring ideas to life. Whether it's building from scratch or improving an existing project, I focus on delivering high-quality solutions tailored to the client's needs.</p>
+        <a href="Atchu-Resume.pdf" download>
+          <button>Download Resume</button>
+        </a>
+    </section>
+    <!-- Projects Section -->
+    <section id="projects">
+        <br>
+        <br>
+        <br>
+        <br>
+        <h2>My Projects</h2>
+        <div class="projects-container">
+          <div class="card">
+            <h3>Project One</h3>
+            <p>A web development project using HTML, CSS, and JavaScript to build a dynamic website.</p>
+          </div>
+          <div class="card">
+            <h3>Project Two</h3>
+            <p>A PHP-based backend project to handle user management and dynamic content.</p>
+          </div>
+          <div class="card">
+            <h3>Project Three</h3>
+            <p>Worked with Bootstrap and SQL Server to create a responsive and efficient website.</p>
+          </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form action="submit_form.php" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit">Submit</button>
+        </form>
+    </section>
+  
+    <script>
+      function showSection(sectionId) {
+        const sections = document.querySelectorAll("section");
+        sections.forEach((section) => section.classList.remove("active"));
+        const sectionToShow = document.getElementById(sectionId);
+        sectionToShow.classList.add("active");
+        sectionToShow.scrollIntoView({ behavior: "smooth" });
+      }
+
+      // Toggle navigation menu visibility
+      function toggleMenu() {
+        const nav = document.querySelector("nav ul");
+        nav.classList.toggle("active");
+      }
+
+      // Close menu on section click
+      function closeMenu() {
+        const nav = document.querySelector("nav ul");
+        nav.classList.remove("active");
+      }
+    </script>
+  </body>
+</html>
